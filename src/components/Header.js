@@ -1,10 +1,18 @@
-import React from 'react';
-import { Button } from '@material-ui/core';
+import React, { Component } from "react";
+// css
 
-function Header() {
-  return <Button color="primary">Hello World</Button>;
+export default class Header extends Component {
+  render() {
+    return (
+      <div className="header">
+        <h1> Employee Directory</h1>
+        <p>
+          Click on carrots filter by heading or use the search box to narrow
+          your results
+        </p>
+      </div>
+    );
+  }
 }
 
-
-export default Header;
 

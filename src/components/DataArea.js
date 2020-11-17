@@ -1,25 +1,25 @@
 import React, { Component } from "react";
-import API from "../utils/API";
 import DataTable from "./DataTable";
 import Nav from "./Nav";
+import API from "../utils/API";
 // css
 
 export default class DataArea extends Component {
   state = {
     users: [{}],
     order: "descend",
-    filterUsers: [{}],
+    filteredUsers: [{}],
   };
 
   componentDidMount() {
     API.getUsers().then(results => {
-      this.setState({
-        users: results.data.results,
-        filteredUsers: results.data.results,
-      });
-      console.log(results.data.results);
+        this.setState({
+            users: results.data.results,
+            filteredUsers: results.data.results
+        });
+
     });
-  }
+}
 
   headings = [
     { name: "Image", width: "10%" },
@@ -81,14 +81,14 @@ export default class DataArea extends Component {
         // event.target is search bar 
         console.log(event.target.value);
         const filter = event.target.value;
-        const filteredList = this.state.users.filter(item =>{
+        const filteredList = this.state.users.filter(item => {
             // merge data together, then see if the user input is anywhere inside 
             let values = Object.values(item)
             .join("")
             .toLowerCase();
             return values.indexOf(filter.toLowerCase()) !== -1;
         });
-        this.setState({ filterUsers: filteredList});
+        this.setState({ filteredUsers: filteredList});
     }  
 
 
@@ -96,16 +96,19 @@ export default class DataArea extends Component {
 
 
     render() {
+    
+
+
         return (
             <>
                 <Nav handleSearchChange={this.handleSearchChange}/>
-                {/* <div className="data-area">
+                <div className="data-area">
                     <DataTable
                     headings={this.headings}
-                    users={this.state.filterUsers}
+                    users={this.state.filteredUsers}
                     handleSort={this.handleSort}
                     />
-                </div> */}
+                </div>
             </>
         );
     }

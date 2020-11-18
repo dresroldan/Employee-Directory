@@ -2,7 +2,8 @@
 
   ## Description:
 The React Employee Directory allows the user to access employee data and filter through them. Users can search for specific employees from the search field at the top of the app as well as sort alphabetically.
-
+ ![Image of landing page](./public/directorymain.png)
+ 
  ## Installation:
   No installation required. 
 

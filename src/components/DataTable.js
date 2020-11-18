@@ -1,13 +1,14 @@
 import React from "react";
 import DataBody from "./DataBody";
+import "../styles/DataTable.css"
 
-function DataTable({headings,users,handleSort}) {
-
-    
-
+function DataTable({ headings, users, handleSort }) {
   return (
     <div className="datatable mt-5">
-      <table id="table"className="table table-striped table-hover table-condensed">
+      <table
+        id="table"
+        className="table table-striped table-hover table-condensed"
+      >
         <thead>
           <tr>
             {headings.map(({ name, width }) => {
@@ -28,7 +29,6 @@ function DataTable({headings,users,handleSort}) {
           </tr>
         </thead>
         <DataBody users={users} />
-        
       </table>
     </div>
   );

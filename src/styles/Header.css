@@ -1,0 +1,12 @@
+body {
+    font: normal medium/1.4 sans-serif;
+   
+}
+
+.header{
+
+    color:white;
+    background-color: black;  
+    padding-bottom: 20px;
+    padding-top: 20px;
+}

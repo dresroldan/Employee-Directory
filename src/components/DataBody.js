@@ -1,13 +1,13 @@
-import React from "react";
+import React from 'react';
 
 function DataBody({ users }) {
   function formatDate(date) {
-    const dateArray = date.split("-");
+    const dateArray = date.split('-');
     const year = dateArray[0];
     const month = dateArray[1];
-    const dayArray = dateArray[2].split("T");
+    const dayArray = dateArray[2].split('T');
     const day = dayArray[0];
-    const formattedDate = [month, day, year].join("-");
+    const formattedDate = [month, day, year].join('-');
     return formattedDate;
   }
 
@@ -21,7 +21,7 @@ function DataBody({ users }) {
               <td data-th="Image" className="align-middle">
                 <img
                   src={picture.medium}
-                  alt={"profile image for" + name.first + " " + name.last}
+                  alt={'profile image for' + name.first + ' ' + name.last}
                   className="img-responsive"
                 />
               </td>
@@ -35,7 +35,7 @@ function DataBody({ users }) {
               </td>
 
               <td data-th="Email" className="align-middle">
-                <a href={"mailto:" + email} target="__blank">
+                <a href={'mailto:' + email} target="__blank">
                   {email}
                 </a>
               </td>

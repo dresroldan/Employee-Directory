@@ -1,7 +1,7 @@
-import React from "react";
+import React from 'react';
 // css
 
-function Wrapper({children}){
+function Wrapper({ children }) {
   return <div className="wrapper">{children}</div>;
 }
 
